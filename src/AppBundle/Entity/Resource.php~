@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace AppBundle\Entity;
 
-use AppBundle\Entity\Appointment;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -117,11 +116,11 @@ class Resource
     /**
      * Set appointment
      *
-     * @param Appointment $appointment
+     * @param \AppBundle\Entity\Appointment $appointment
      *
      * @return Resource
      */
-    public function setAppointment(Appointment $appointment = null)
+    public function setAppointment(\AppBundle\Entity\Appointment $appointment = null)
     {
         $this->appointment = $appointment;
 
@@ -131,7 +130,7 @@ class Resource
     /**
      * Get appointment
      *
-     * @return Appointment
+     * @return \AppBundle\Entity\Appointment
      */
     public function getAppointment()
     {

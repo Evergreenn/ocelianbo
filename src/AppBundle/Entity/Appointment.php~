@@ -121,7 +121,6 @@ class Appointment
     public function addResource(Resource $resource)
     {
         $this->resources[] = $resource;
-        $resource->setAppointment($this);
 
         return $this;
     }
@@ -133,7 +132,6 @@ class Appointment
      */
     public function removeResource(Resource $resource)
     {
-        $resource->setAppointment(null);
         $this->resources->removeElement($resource);
     }
 
